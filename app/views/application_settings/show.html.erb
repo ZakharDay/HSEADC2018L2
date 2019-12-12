@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @application_setting.name %>
+</p>
+
+<p>
+  <strong>About:</strong>
+  <%= @application_setting.about %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @application_setting.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @application_setting.phone %>
+</p>
+
+<p>
+  <strong>Project title:</strong>
+  <%= @application_setting.project_title %>
+</p>
+
+<p>
+  <strong>Project description:</strong>
+  <%= @application_setting.project_description %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @application_setting.age %>
+</p>
+
+<%= link_to 'Edit', edit_application_setting_path(@application_setting) %> |
+<%= link_to 'Back', application_settings_path %>

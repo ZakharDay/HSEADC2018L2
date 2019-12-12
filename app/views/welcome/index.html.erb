@@ -1,0 +1,29 @@
+<div>Template Start</div>
+
+<% posts = [
+  {
+    title: "Title 1",
+    body: "Body 1",
+    image: "Image 1"
+  },
+  {
+    title: "Title 2",
+    body: "Body 2",
+    image: "Image 2"
+  },
+  {
+    title: "Title 3",
+    body: "Body 3",
+    image: "Image 3"
+  }
+] %>
+
+<% posts.each do |post| %>
+  <%= render 'some_partial', post: post %>
+<% end %>
+
+<%= image_tag "qrcode.jpeg" %>
+
+<div class="image"></div>
+
+<div>Template End</div>

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: false
+  about: false
+  email: false
+  phone: false
+  project_title: false
+  project_description: false
+  age: false
+
+two:
+  name: false
+  about: false
+  email: false
+  phone: false
+  project_title: false
+  project_description: false
+  age: false

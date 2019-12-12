@@ -1,0 +1,52 @@
+<%= form_with(model: [@post, application_setting], local: true) do |form| %>
+  <% if application_setting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(application_setting.errors.count, "error") %> prohibited this application_setting from being saved:</h2>
+
+      <ul>
+        <% application_setting.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.check_box :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :about %>
+    <%= form.check_box :about %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.check_box :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.check_box :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project_title %>
+    <%= form.check_box :project_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project_description %>
+    <%= form.check_box :project_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.check_box :age %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,66 @@
+<%= form_with(model: [@post, application_form], local: true) do |form| %>
+  <% if application_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(application_form.errors.count, "error") %> prohibited this application_form from being saved:</h2>
+
+      <ul>
+        <% application_form.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @application_setting.name %>
+    <div class="field">
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </div>
+  <% end %>
+
+  <% if @application_setting.about %>
+    <div class="field">
+      <%= form.label :about %>
+      <%= form.text_area :about %>
+    </div>
+  <% end %>
+
+  <% if @application_setting.email %>
+    <div class="field">
+      <%= form.label :email %>
+      <%= form.text_field :email %>
+    </div>
+  <% end %>
+
+  <% if @application_setting.phone %>
+    <div class="field">
+      <%= form.label :phone %>
+      <%= form.text_field :phone %>
+    </div>
+  <% end %>
+
+  <% if @application_setting.project_title %>
+    <div class="field">
+      <%= form.label :project_title %>
+      <%= form.text_field :project_title %>
+    </div>
+  <% end %>
+
+  <% if @application_setting.project_description %>
+    <div class="field">
+      <%= form.label :project_description %>
+      <%= form.text_area :project_description %>
+    </div>
+  <% end %>
+
+  <% if @application_setting.age %>
+    <div class="field">
+      <%= form.label :age %>
+      <%= form.number_field :age %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

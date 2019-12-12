@@ -1,0 +1,14 @@
+div {
+  &.post {
+    h1 {
+      color: blue;
+    }
+  }
+
+  &.image {
+    width: 100px;
+    height: 100px;
+    background-image: image-url("qrcode.jpeg");
+    background-size: cover;
+  }
+}
